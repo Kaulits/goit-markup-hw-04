@@ -357,7 +357,8 @@ letter-spacing: 0.02em;
     padding: 188px 0;
     max-width: 1440px;
     margin: 0 auto;
-    background-image:  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero-back.png);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/img-name.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -567,7 +568,7 @@ gap: 24px;
 
     color: var(--customers-icons);
     border: 1px solid var(--customers-icons); 
-    border-radius: 4px, 
+    border-radius: 4px;
 
 }
 
