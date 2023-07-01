@@ -2,11 +2,24 @@
     --title-text-color:#2E2F42;
     --usual-text-color:#434455;
     --white-text-color:#F4F4FD;
+
+    --title-white-color: #FFFFFF;
+
     --accent-color:#4D5AE5;
+
     --primary-bcg-color:#FFFFFF;
     --secondary-bcg-color: #E5E5E5;
     --dark-bcg-color:#2E2F42 ;
+
     --border-color: #E7E9FC;
+
+    --main-gradient: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70));
+    --icons-bc-color: #4D5AE5;
+    --customers-icons: #8E8F99;
+
+    --focus-color-section: #404BBF;
+    --focus-color-footer: #31D0AA;
+    --focus-color-customers: #404BBF;
 
 }
 
@@ -85,7 +98,53 @@ body {
     overflow: hidden;
 }
 
+
+/* ========== SOCIALS ========== */
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    color: var(--white-text-color);
+    background-color: var(--icons-bc-color);
+    border-radius: 50%;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-icons-section {
+fill: currentColor;
+}
+
+.social-icons-footer {
+    fill: currentColor;
+}
+
+.social-link-section:hover,
+.social-link-section:focus {
+    background-color: var(--focus-color-section);
+}
+
+
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: var(--focus-color-footer);
+}
+/* ========== /SOCIALS ========== */
+
+
+
+
 /* ========/ELEMENTS======== */
+
+
 
 /* ========HEADER======== */
 
@@ -175,6 +234,9 @@ color: var(--usual-text-color);
 .contact-info:focus {
     color: #404bbf;
 }
+
+
+
 
 /* ========/HEADER======== */
 
@@ -275,8 +337,15 @@ letter-spacing: 0.02em;
 
 
 .hero {
-    background-color:#2e2f42;
+    background-color: var(--dark-bcg-color);
     padding: 188px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: var(--main-gradient), url(../images/hero/hero-back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .hero-title {
@@ -286,7 +355,7 @@ font-size: 56px;
 line-height: 1.07;
 text-align: center;
 letter-spacing: 0.02em;
-color: #ffffff;
+color: var(--title-white-color);
 display: flex;
 width: 496px;
 flex-direction: column;
@@ -350,6 +419,20 @@ gap: 24px;
 .marketing-item {
     width: calc((100% - 72px) / 4);
 
+}
+
+.marketing-card {
+    width: 264px;
+    height: 112px;
+    flex-shrink: 0;
+
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: var(--white-text-color);
+
+    display: flex;
+    align-items: center;
+    gap: 24;
 }
 
 
@@ -421,6 +504,7 @@ gap: 24px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 
 }
 
@@ -438,6 +522,56 @@ gap: 24px;
 
 /* ========/SECTION-OUR-TEAM======== */
 
+/* ======== CUSTOMERS ========  */
+
+.customers-title {
+    color: var(--title-text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+
+
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    flex-shrink: 0;
+
+    color: var(--customers-icons);
+    border: 1px solid var(--customers-icons); 
+
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.customers-icons {
+fill: currentColor;
+}
+
+
+.customers-link:hover,
+.customers-link:focus {
+    color: var(--focus-color-customers);
+    border:  1px solid var(--focus-color-customers);
+}
+
+
+
+/* ======== /CUSTOMERS ========  */
+
 
 
 /* ========FOOTER======== */
@@ -445,6 +579,11 @@ gap: 24px;
 .footer {
     background-color: #2e2f42;
      padding: 100px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 120px;
 }
 
 .footer-text {
@@ -455,12 +594,10 @@ letter-spacing: 0.02em;
 color: #F4F4FD;
 }
 
-
 .logo-footer {
     display: inline-block;
     margin-bottom: 16px;
 }
-
 
 
 .white-logo {
@@ -469,10 +606,18 @@ color: #F4F4FD;
 }
 
 
-
-
 .footer-text {
     max-width: 264px;
+}
+
+
+.footer-media-text {
+color: var(--title-white-color);
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.32px;
+margin-bottom: 16px;
 }
 
 /* ========/FOOTER======== */
